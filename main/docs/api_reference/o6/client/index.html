@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -2498,9 +2498,7 @@ addresses may have changed.</p>
 
 
 <a href="#o6.client.Client.get_endpoints" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_endpoints</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">server_url</span><span class="p">,</span> <span class="n">localeids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">profile_uris</span><span class="o">=</span><span class="kc">None</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_endpoints</span><span class="p">(</span><span class="n">server_url</span><span class="p">,</span> <span class="n">locale_ids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">profile_uris</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2521,7 +2519,7 @@ addresses may have changed.</p>
 
 
 <a href="#o6.client.Client.find_servers" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">find_servers</span><span class="p">(</span><span class="n">server_url</span><span class="p">,</span> <span class="n">server_uris</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">localeids</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">find_servers</span><span class="p">(</span><span class="n">server_url</span><span class="p">,</span> <span class="n">server_uris</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">locale_ids</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2542,11 +2540,7 @@ addresses may have changed.</p>
 
 
 <a href="#o6.client.Client.find_servers_on_network" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">find_servers_on_network</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">starting_recordid</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">max_records_to_return</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">server_capability_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">find_servers_on_network</span><span class="p">(</span><span class="n">starting_record_id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_records_to_return</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">server_capability_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2567,12 +2561,7 @@ addresses may have changed.</p>
 
 
 <a href="#o6.client.Client.read" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">read</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">target</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">attributeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">AttributeId</span><span class="o">.</span><span class="n">VALUE</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">timestamps_to_return</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">as_datavalue</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">read</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">attribute_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">AttributeId</span><span class="o">.</span><span class="n">VALUE</span><span class="p">,</span> <span class="n">timestamps_to_return</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">as_datavalue</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2622,7 +2611,6 @@ addresses may have changed.</p>
                 <code>attributeid</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="o6.AttributeId" href="../../o6.AttributeId/#o6.AttributeId">AttributeId</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2630,7 +2618,7 @@ addresses may have changed.</p>
               </div>
             </td>
             <td>
-                  <code>...</code>
+                <em>required</em>
             </td>
           </tr>
           <tr class="doc-section-item">
@@ -2725,7 +2713,7 @@ converted Python values.</p>
 
 
 <a href="#o6.client.Client.write" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">write</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attributeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">AttributeId</span><span class="o">.</span><span class="n">VALUE</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">write</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attribute_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">AttributeId</span><span class="o">.</span><span class="n">VALUE</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2789,7 +2777,7 @@ batch writes.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>attributeid</code>
+                <code>attribute_id</code>
             </td>
             <td>
                   <code><a class="autorefs autorefs-internal" title="o6.AttributeId" href="../../o6.AttributeId/#o6.AttributeId">AttributeId</a></code>
@@ -2863,7 +2851,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.call" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">call</span><span class="p">(</span><span class="n">objectid</span><span class="p">,</span> <span class="n">methodid</span><span class="p">,</span> <span class="n">input_args</span><span class="o">=</span><span class="p">[])</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">call</span><span class="p">(</span><span class="n">object_id</span><span class="p">,</span> <span class="n">method_id</span><span class="p">,</span> <span class="n">input_args</span><span class="o">=</span><span class="p">[])</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2887,12 +2875,6 @@ batch writes.</p>
                 <code>objectid</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="NodeIdLike
-
-
-  
-      module-attribute
-   (o6.NodeIdLike)" href="../#o6.NodeIdLike">NodeIdLike</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2908,12 +2890,6 @@ batch writes.</p>
                 <code>methodid</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="NodeIdLike
-
-
-  
-      module-attribute
-   (o6.NodeIdLike)" href="../#o6.NodeIdLike">NodeIdLike</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2984,14 +2960,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.browse" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">browse</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">target</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">direction</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">BrowseDirection</span><span class="o">.</span><span class="n">Forward</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">reftype</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">refsubtypes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">nodeclass_mask</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">NodeClass</span><span class="o">.</span><span class="n">Unspecified</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">result_mask</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">BrowseResultMask</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">browse</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">BrowseDirection</span><span class="o">.</span><span class="n">Forward</span><span class="p">,</span> <span class="n">reftype</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="p">,</span> <span class="n">refsubtypes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nodeclass_mask</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">NodeClass</span><span class="o">.</span><span class="n">Unspecified</span><span class="p">,</span> <span class="n">result_mask</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">BrowseResultMask</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3175,14 +3144,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.history_read" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">target</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">start_time</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">end_time</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">num_values_per_node</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">return_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timestamps_to_return</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">TimestampsToReturn</span><span class="o">.</span><span class="n">Both</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">num_values_per_node</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">return_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timestamps_to_return</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">TimestampsToReturn</span><span class="o">.</span><span class="n">Both</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3346,14 +3308,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.history_read_modified" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read_modified</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">target</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">start_time</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">end_time</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">num_values_per_node</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">return_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">timestamps_to_return</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">TimestampsToReturn</span><span class="o">.</span><span class="n">Both</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read_modified</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">num_values_per_node</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">return_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timestamps_to_return</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">TimestampsToReturn</span><span class="o">.</span><span class="n">Both</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3517,9 +3472,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.history_read_at_time" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read_at_time</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">target</span><span class="p">,</span> <span class="n">timestamps</span><span class="p">,</span> <span class="n">use_simple_bounds</span><span class="o">=</span><span class="kc">False</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read_at_time</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">timestamps</span><span class="p">,</span> <span class="n">use_simple_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3635,13 +3588,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.history_read_processed" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read_processed</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">target</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">start_time</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">end_time</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">processing_interval</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">aggregate_type</span><span class="o">=</span><span class="s2">&quot;i=2341&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read_processed</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">processing_interval</span><span class="p">,</span> <span class="n">aggregate_type</span><span class="o">=</span><span class="s1">&#39;i=2341&#39;</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3794,9 +3741,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.history_update" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_update</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">target</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">PerformUpdateType</span><span class="o">.</span><span class="n">Insert</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_update</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">PerformUpdateType</span><span class="o">.</span><span class="n">Insert</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4018,15 +3963,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.add_node" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_node</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">parent_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">browse_name</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">node_class</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">node_attributes</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">requested_new_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">reference_typeid</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">type_definition</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_node</span><span class="p">(</span><span class="n">parent_nodeid</span><span class="p">,</span> <span class="n">browse_name</span><span class="p">,</span> <span class="n">node_class</span><span class="p">,</span> <span class="n">node_attributes</span><span class="p">,</span> <span class="n">requested_new_nodeid</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="p">,</span> <span class="n">type_definition</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4140,12 +4077,6 @@ batch writes.</p>
                 <code>reference_typeid</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="NodeIdLike
-
-
-  
-      module-attribute
-   (o6.NodeIdLike)" href="../#o6.NodeIdLike">NodeIdLike</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4221,14 +4152,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.add_variable_node" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_variable_node</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">parent_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">browse_name</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">node_attributes</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">reference_typeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">Aggregates</span><span class="o">.</span><span class="n">HasComponent</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">type_definition</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">vartypes</span><span class="o">.</span><span class="n">BaseVariableType</span><span class="o">.</span><span class="n">BaseDataVariableType</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_variable_node</span><span class="p">(</span><span class="n">parent_nodeid</span><span class="p">,</span> <span class="n">browse_name</span><span class="p">,</span> <span class="n">node_attributes</span><span class="p">,</span> <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">Aggregates</span><span class="o">.</span><span class="n">HasComponent</span><span class="p">,</span> <span class="n">type_definition</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">vartypes</span><span class="o">.</span><span class="n">BaseVariableType</span><span class="o">.</span><span class="n">BaseDataVariableType</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4326,12 +4250,6 @@ batch writes.</p>
                 <code>reference_typeid</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="NodeIdLike
-
-
-  
-      module-attribute
-   (o6.NodeIdLike)" href="../#o6.NodeIdLike">NodeIdLike</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4339,7 +4257,7 @@ batch writes.</p>
               </div>
             </td>
             <td>
-                  <code>...</code>
+                <em>required</em>
             </td>
           </tr>
           <tr class="doc-section-item">
@@ -4407,13 +4325,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.add_variable_type_node" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_variable_type_node</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">parent_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">browse_name</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">node_attributes</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">reference_typeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">HasSubtype</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_variable_type_node</span><span class="p">(</span><span class="n">parent_nodeid</span><span class="p">,</span> <span class="n">browse_name</span><span class="p">,</span> <span class="n">node_attributes</span><span class="p">,</span> <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">HasSubtype</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4508,7 +4420,7 @@ batch writes.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>reference_typeid</code>
+                <code>reference_type_id</code>
             </td>
             <td>
                   <code><a class="autorefs autorefs-internal" title="NodeIdLike
@@ -4571,14 +4483,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.add_object_node" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_object_node</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">parent_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">browse_name</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">node_attributes</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">reference_typeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">Aggregates</span><span class="o">.</span><span class="n">HasComponent</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">type_definition</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">objtypes</span><span class="o">.</span><span class="n">BaseObjectType</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_object_node</span><span class="p">(</span><span class="n">parent_nodeid</span><span class="p">,</span> <span class="n">browse_name</span><span class="p">,</span> <span class="n">node_attributes</span><span class="p">,</span> <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">Aggregates</span><span class="o">.</span><span class="n">HasComponent</span><span class="p">,</span> <span class="n">type_definition</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">objtypes</span><span class="o">.</span><span class="n">BaseObjectType</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4676,12 +4581,6 @@ batch writes.</p>
                 <code>reference_typeid</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="NodeIdLike
-
-
-  
-      module-attribute
-   (o6.NodeIdLike)" href="../#o6.NodeIdLike">NodeIdLike</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4689,7 +4588,7 @@ batch writes.</p>
               </div>
             </td>
             <td>
-                  <code>...</code>
+                <em>required</em>
             </td>
           </tr>
           <tr class="doc-section-item">
@@ -4757,13 +4656,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.add_object_type_node" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_object_type_node</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">parent_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">browse_name</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">node_attributes</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">reference_typeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">HasSubtype</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_object_type_node</span><span class="p">(</span><span class="n">parent_nodeid</span><span class="p">,</span> <span class="n">browse_name</span><span class="p">,</span> <span class="n">node_attributes</span><span class="p">,</span> <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">HasSubtype</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4858,7 +4751,7 @@ batch writes.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>reference_typeid</code>
+                <code>reference_type_id</code>
             </td>
             <td>
                   <code><a class="autorefs autorefs-internal" title="NodeIdLike
@@ -4921,13 +4814,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.add_view_node" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_view_node</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">parent_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">browse_name</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">node_attributes</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">reference_typeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">Aggregates</span><span class="o">.</span><span class="n">HasComponent</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_view_node</span><span class="p">(</span><span class="n">parent_nodeid</span><span class="p">,</span> <span class="n">browse_name</span><span class="p">,</span> <span class="n">node_attributes</span><span class="p">,</span> <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">Aggregates</span><span class="o">.</span><span class="n">HasComponent</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5022,7 +4909,7 @@ batch writes.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>reference_typeid</code>
+                <code>reference_type_id</code>
             </td>
             <td>
                   <code><a class="autorefs autorefs-internal" title="NodeIdLike
@@ -5085,13 +4972,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.add_reference_type_node" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_reference_type_node</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">parent_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">browse_name</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">node_attributes</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">reference_typeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">HasSubtype</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_reference_type_node</span><span class="p">(</span><span class="n">parent_nodeid</span><span class="p">,</span> <span class="n">browse_name</span><span class="p">,</span> <span class="n">node_attributes</span><span class="p">,</span> <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">HasSubtype</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5186,7 +5067,7 @@ batch writes.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>reference_typeid</code>
+                <code>reference_type_id</code>
             </td>
             <td>
                   <code><a class="autorefs autorefs-internal" title="NodeIdLike
@@ -5249,13 +5130,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.add_data_type_node" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_data_type_node</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">parent_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">browse_name</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">node_attributes</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">reference_typeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">HasSubtype</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_data_type_node</span><span class="p">(</span><span class="n">parent_nodeid</span><span class="p">,</span> <span class="n">browse_name</span><span class="p">,</span> <span class="n">node_attributes</span><span class="p">,</span> <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">HasSubtype</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5350,7 +5225,7 @@ batch writes.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>reference_typeid</code>
+                <code>reference_type_id</code>
             </td>
             <td>
                   <code><a class="autorefs autorefs-internal" title="NodeIdLike
@@ -5413,13 +5288,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.add_method_node" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_method_node</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">parent_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">browse_name</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">node_attributes</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">reference_typeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">Aggregates</span><span class="o">.</span><span class="n">HasComponent</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_method_node</span><span class="p">(</span><span class="n">parent_nodeid</span><span class="p">,</span> <span class="n">browse_name</span><span class="p">,</span> <span class="n">node_attributes</span><span class="p">,</span> <span class="n">requested_new_nodeid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="o">.</span><span class="n">HasChild</span><span class="o">.</span><span class="n">Aggregates</span><span class="o">.</span><span class="n">HasComponent</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5514,7 +5383,7 @@ batch writes.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>reference_typeid</code>
+                <code>reference_type_id</code>
             </td>
             <td>
                   <code><a class="autorefs autorefs-internal" title="NodeIdLike
@@ -5683,14 +5552,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Client.add_reference" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_reference</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">source_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">reference_typeid</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">target_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">is_forward</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">target_node_class</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">NodeClass</span><span class="o">.</span><span class="n">Unspecified</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">target_server_uri</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_reference</span><span class="p">(</span><span class="n">source_nodeid</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="p">,</span> <span class="n">target_nodeid</span><span class="p">,</span> <span class="n">is_forward</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">target_node_class</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">NodeClass</span><span class="o">.</span><span class="n">Unspecified</span><span class="p">,</span> <span class="n">target_server_uri</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5735,12 +5597,6 @@ node targets.</p>
                 <code>reference_typeid</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="NodeIdLike
-
-
-  
-      module-attribute
-   (o6.NodeIdLike)" href="../#o6.NodeIdLike">NodeIdLike</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5864,13 +5720,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Client.delete_reference" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">delete_reference</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">source_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">reference_typeid</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">target_nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">is_forward</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">delete_bidirectional</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">delete_reference</span><span class="p">(</span><span class="n">source_nodeid</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="p">,</span> <span class="n">target_nodeid</span><span class="p">,</span> <span class="n">is_forward</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">delete_bidirectional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5915,12 +5765,6 @@ node targets.</p>
                 <code>reference_typeid</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="NodeIdLike
-
-
-  
-      module-attribute
-   (o6.NodeIdLike)" href="../#o6.NodeIdLike">NodeIdLike</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6028,12 +5872,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Client.create_subscription" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create_subscription</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">req</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">publishing_interval</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">lifetime_count</span><span class="o">=</span><span class="mi">36000</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">max_keepalive_count</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create_subscription</span><span class="p">(</span><span class="n">req</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">publishing_interval</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span> <span class="n">lifetime_count</span><span class="o">=</span><span class="mi">36000</span><span class="p">,</span> <span class="n">max_keepalive_count</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6160,13 +5999,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Client.monitor" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">monitor</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">target</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">subscription</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">monitor</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span> <span class="n">subscription</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6325,14 +6158,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Client.monitor_event" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">monitor_event</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">callback</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">event_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">subscription</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">monitor_event</span><span class="p">(</span><span class="n">nodeid</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">event_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">subscription</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6556,7 +6382,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Client.change_repeated_callback_interval" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">change_repeated_callback_interval</span><span class="p">(</span><span class="n">callbackid</span><span class="p">,</span> <span class="n">interval_ms</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">change_repeated_callback_interval</span><span class="p">(</span><span class="n">callback_id</span><span class="p">,</span> <span class="n">interval_ms</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6574,7 +6400,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Client.remove_callback" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">remove_callback</span><span class="p">(</span><span class="n">callbackid</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">remove_callback</span><span class="p">(</span><span class="n">callback_id</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6797,16 +6623,16 @@ node targets.</p>
 
 
 
-<h6 id="o6.client.Subscription.subscriptionid" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">subscriptionid</span>
+<h6 id="o6.client.Subscription.subscription_id" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">subscription_id</span>
 
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
-<a href="#o6.client.Subscription.subscriptionid" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">subscriptionid</span>
+<a href="#o6.client.Subscription.subscription_id" class="headerlink" title="Permanent link">&para;</a></h6>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">subscription_id</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6958,12 +6784,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Subscription.monitor" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">monitor</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">monitor</span><span class="p">(</span><span class="n">nodeid</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7101,13 +6922,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Subscription.monitor_event" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">monitor_event</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">callback</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">event_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">monitor_event</span><span class="p">(</span><span class="n">nodeid</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">event_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7304,13 +7119,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Subscription.modify" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modify</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">publishing_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">lifetime_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">max_keepalive_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">max_notifications_per_publish</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">publishing_enabled</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modify</span><span class="p">(</span><span class="n">publishing_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lifetime_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_keepalive_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_notifications_per_publish</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">publishing_enabled</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7497,10 +7306,7 @@ node targets.</p>
   </span>
 
 <a href="#o6.client.MonitoredItem.DataChangeCallback" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DataChangeCallback</span> <span class="o">=</span> <span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">|</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">MonitoredItem</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DataChangeCallback</span> <span class="o">=</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">MonitoredItem</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7523,10 +7329,7 @@ node targets.</p>
   </span>
 
 <a href="#o6.client.MonitoredItem.EventCallback" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">EventCallback</span> <span class="o">=</span> <span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">Callable</span><span class="p">[[</span><span class="nb">dict</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">|</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">MonitoredItem</span><span class="p">,</span> <span class="nb">dict</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">EventCallback</span> <span class="o">=</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">dict</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">MonitoredItem</span><span class="p">,</span> <span class="nb">dict</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7671,16 +7474,16 @@ node targets.</p>
 
 
 
-<h6 id="o6.client.MonitoredItem.monitored_itemid" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">monitored_itemid</span>
+<h6 id="o6.client.MonitoredItem.monitored_item_id" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">monitored_item_id</span>
 
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
-<a href="#o6.client.MonitoredItem.monitored_itemid" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">monitored_itemid</span>
+<a href="#o6.client.MonitoredItem.monitored_item_id" class="headerlink" title="Permanent link">&para;</a></h6>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">monitored_item_id</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7704,16 +7507,7 @@ node targets.</p>
   </span>
 
 <a href="#o6.client.MonitoredItem.data_change" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">data_change</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">subscription</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">callback</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">attributeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">AttributeId</span><span class="o">.</span><span class="n">VALUE</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">index_range</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">data_encoding</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">250.0</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">data_change</span><span class="p">(</span><span class="n">subscription</span><span class="p">,</span> <span class="n">nodeid</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">attribute_id</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">AttributeId</span><span class="o">.</span><span class="n">VALUE</span><span class="p">,</span> <span class="n">index_range</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">data_encoding</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">250.0</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7796,7 +7590,6 @@ node targets.</p>
                 <code>attributeid</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="o6.AttributeId" href="../../o6.AttributeId/#o6.AttributeId">AttributeId</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -7804,7 +7597,7 @@ node targets.</p>
               </div>
             </td>
             <td>
-                  <code>...</code>
+                <em>required</em>
             </td>
           </tr>
           <tr class="doc-section-item">
@@ -7914,14 +7707,7 @@ node targets.</p>
   </span>
 
 <a href="#o6.client.MonitoredItem.event" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">event</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">subscription</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">nodeid</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">callback</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">event_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">event</span><span class="p">(</span><span class="n">subscription</span><span class="p">,</span> <span class="n">nodeid</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">event_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -8129,12 +7915,7 @@ node targets.</p>
 
 
 <a href="#o6.client.MonitoredItem.modify" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modify</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">sampling_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">queue_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">discard_oldest</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="nb">filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modify</span><span class="p">(</span><span class="n">sampling_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">discard_oldest</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">

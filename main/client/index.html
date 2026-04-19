@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -1772,11 +1772,11 @@
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="s2">&quot;ns=1;s=DoubleVariable&quot;</span><span class="p">:</span> <span class="mf">2.7182</span><span class="p">,</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">})</span>
 </code></pre></div>
-<p>The attribute to read or write can also be selected explicitly with <code>attributeid=...</code>, which is useful for metadata such as browse names, data types, or access levels.</p>
+<p>The attribute to read or write can also be selected explicitly with <code>attribute_id=...</code>, which is useful for metadata such as browse names, data types, or access levels.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">client</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;ns=1;s=IntegerVariable&quot;</span><span class="p">,</span> <span class="n">attributeid</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">AttributeId</span><span class="o">.</span><span class="n">NODECLASS</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="method-calling">Method calling<a class="headerlink" href="#method-calling" title="Permanent link">&para;</a></h3>
-<p>OPC UA methods are called with <code>call(objectid, methodid, input_args=...)</code>.</p>
+<p>OPC UA methods are called with <code>call(object_id, method_id, input_args=...)</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">status</span><span class="p">,</span> <span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">call</span><span class="p">(</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="s2">&quot;ns=1;s=TestMethods&quot;</span><span class="p">,</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="s2">&quot;ns=1;s=MethodHelloString&quot;</span><span class="p">,</span>
