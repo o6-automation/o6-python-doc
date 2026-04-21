@@ -1733,6 +1733,99 @@ be discovered through <code>client.ns.remote.discover()</code>.</p>
 so that namespace index translation can be set up correctly.  Attempting
 to add namespaces after the session is established raises <code>RuntimeError</code>.</p>
 </details>
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="o6.client.Client.ns.root">root</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="o6.client_nodes.Node" href="../../o6.client_nodes.Node/#o6.client_nodes.Node">Node</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The OPC UA Root folder node (i=84) and primary entry
+point for the node-style API.</p>
+<p><code>Node</code> objects support attribute-style child traversal: each
+attribute access issues a <code>Browse</code> request to resolve the child by
+BrowseName, returning a new <code>Node</code>. Calling the node reads its
+value; passing a value writes it. Passing <code>attr=</code> selects a
+different OPC UA attribute:</p>
+<h6 id="o6.client.Client.ns--read-the-current-server-time">Read the current server time<a class="headerlink" href="#o6.client.Client.ns--read-the-current-server-time" title="Permanent link">&para;</a></h6>
+<p>current_time = client.root.Objects.Server.ServerStatus.CurrentTime()</p>
+<h6 id="o6.client.Client.ns--read-the-browsename-attribute-of-a-node">Read the BrowseName attribute of a node<a class="headerlink" href="#o6.client.Client.ns--read-the-browsename-attribute-of-a-node" title="Permanent link">&para;</a></h6>
+<p>name = client.root.Objects.Server(attr=o6.AttributeId.BROWSENAME)</p>
+<h6 id="o6.client.Client.ns--write-a-value">Write a value<a class="headerlink" href="#o6.client.Client.ns--write-a-value" title="Permanent link">&para;</a></h6>
+<p>client.root.Objects.MyDevice.SetPoint(42.0)</p>
+<p>Child nodes can also be accessed by subscription index (<code>[i=...]</code>,
+<code>[ns=1;s=Name]</code>) or browse-path syntax.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="o6.client.Client.ns.objects">objects</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="o6.client_nodes.Node" href="../../o6.client_nodes.Node/#o6.client_nodes.Node">Node</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The Objects folder node (i=85); shortcut into the
+application-level address space. See <code>root</code> for node-style API details.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="o6.client.Client.ns.types">types</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="o6.client_nodes.Node" href="../../o6.client_nodes.Node/#o6.client_nodes.Node">Node</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The Types folder node (i=86); entry point for
+browsing the server's type hierarchies. See <code>root</code> for node-style API
+details.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="o6.client.Client.ns.views">views</span></code></td>
+            <td>
+                  <code><span title="nodse.Node">Node</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The Views folder node (i=87); entry point for
+server-defined address-space views. See <code>root</code> for node-style API
+details.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="o6.client.Client.ns.Important">Important</span></code></td>
+            <td>
+                  <code><span title="nodse.Node">Node</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>Node</code> objects cache their children after the first browse.
+Storing a <code>Node</code> reference and reusing it across reconnects or
+server restarts may return stale NodeIds or miss structural changes
+in the server address space.  Obtain a fresh node from <code>root</code>
+(or <code>objects</code> / <code>types</code> / <code>views</code>) after each time the server
+addresses may have changed.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
     </div>
 
 </div>
@@ -1751,6 +1844,94 @@ to add namespaces after the session is established raises <code>RuntimeError</co
 
 <a href="#o6.client.Client.config" class="headerlink" title="Permanent link">&para;</a></h6>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">config</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="o6.client.Client.root" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">root</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#o6.client.Client.root" class="headerlink" title="Permanent link">&para;</a></h6>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">root</span> <span class="o">=</span> <span class="n">ObjectNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;i=84&#39;</span><span class="p">,</span> <span class="n">QualifiedName</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Root&#39;</span><span class="p">))</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="o6.client.Client.objects" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">objects</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#o6.client.Client.objects" class="headerlink" title="Permanent link">&para;</a></h6>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">objects</span> <span class="o">=</span> <span class="n">ObjectNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;i=85&#39;</span><span class="p">,</span> <span class="n">QualifiedName</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Objects&#39;</span><span class="p">))</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="o6.client.Client.types" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">types</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#o6.client.Client.types" class="headerlink" title="Permanent link">&para;</a></h6>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">types</span> <span class="o">=</span> <span class="n">ObjectNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;i=86&#39;</span><span class="p">,</span> <span class="n">QualifiedName</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Types&#39;</span><span class="p">))</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="o6.client.Client.views" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">views</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#o6.client.Client.views" class="headerlink" title="Permanent link">&para;</a></h6>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">views</span> <span class="o">=</span> <span class="n">ObjectNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;i=87&#39;</span><span class="p">,</span> <span class="n">QualifiedName</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Views&#39;</span><span class="p">))</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1849,127 +2030,6 @@ to add namespaces after the session is established raises <code>RuntimeError</co
     <div class="doc doc-contents ">
 
         <p>Test if a client has both SecureChannel and Session connected.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h6 id="o6.client.Client.root" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">root</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#o6.client.Client.root" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">root</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>The OPC UA Root folder node (i=84) and primary entry point for the node-style API.</p>
-<p><code>Node</code> objects support attribute-style child traversal: each attribute
-access issues a <code>Browse</code> request to resolve the child by BrowseName,
-returning a new <code>Node</code>.  Calling the node reads its value; passing a
-value writes it.  Passing <code>attr=</code> selects a different OPC UA attribute:</p>
-<div class="highlight"><pre><span></span><code># Read the current server time
-current_time = client.root.Objects.Server.ServerStatus.CurrentTime()
-
-# Read the BrowseName attribute of a node
-name = client.root.Objects.Server(attr=o6.AttributeId.BROWSENAME)
-
-# Write a value
-client.root.Objects.MyDevice.SetPoint(42.0)
-</code></pre></div>
-<p>Child nodes can also be accessed by subscription index (<code>[i=...]</code>,
-<code>[ns=1;s=Name]</code>) or browse-path syntax.</p>
-
-
-<details class="important" open>
-  <summary>Important</summary>
-  <p><code>Node</code> objects cache their children after the first browse.
-Storing a <code>Node</code> reference and reusing it across reconnects or
-server restarts may return stale NodeIds or miss structural changes
-in the server address space.  Obtain a fresh node from <code>root</code>
-(or <code>objects</code> / <code>types</code> / <code>views</code>) after each time the server
-addresses may have changed.</p>
-</details>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h6 id="o6.client.Client.objects" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">objects</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#o6.client.Client.objects" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">objects</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>The Objects folder node (i=85); shortcut into the application-level address space. See <code>root</code> for node-style API details.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h6 id="o6.client.Client.types" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">types</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#o6.client.Client.types" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">types</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>The Types folder node (i=86); entry point for browsing the server's type hierarchies. See <code>root</code> for node-style API details.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h6 id="o6.client.Client.views" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">views</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#o6.client.Client.views" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">views</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>The Views folder node (i=87); entry point for server-defined address-space views. See <code>root</code> for node-style API details.</p>
 
     </div>
 
@@ -2960,7 +3020,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.browse" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">browse</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">BrowseDirection</span><span class="o">.</span><span class="n">Forward</span><span class="p">,</span> <span class="n">reftype</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="p">,</span> <span class="n">refsubtypes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nodeclass_mask</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">NodeClass</span><span class="o">.</span><span class="n">Unspecified</span><span class="p">,</span> <span class="n">result_mask</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">BrowseResultMask</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">browse</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">BrowseDirection</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">reftype</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">ns0</span><span class="o">.</span><span class="n">reftypes</span><span class="o">.</span><span class="n">References</span><span class="o">.</span><span class="n">HierarchicalReferences</span><span class="p">,</span> <span class="n">refsubtypes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nodeclass_mask</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">NodeClass</span><span class="o">.</span><span class="n">UNSPECIFIED</span><span class="p">,</span> <span class="n">result_mask</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">BrowseResultMask</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3144,7 +3204,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.history_read" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">num_values_per_node</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">return_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timestamps_to_return</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">TimestampsToReturn</span><span class="o">.</span><span class="n">Both</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">num_values_per_node</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">return_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timestamps_to_return</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">TimestampsToReturn</span><span class="o">.</span><span class="n">BOTH</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3308,7 +3368,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.history_read_modified" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read_modified</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">num_values_per_node</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">return_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timestamps_to_return</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">TimestampsToReturn</span><span class="o">.</span><span class="n">Both</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_read_modified</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">num_values_per_node</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">return_bounds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timestamps_to_return</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">TimestampsToReturn</span><span class="o">.</span><span class="n">BOTH</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3741,7 +3801,7 @@ batch writes.</p>
 
 
 <a href="#o6.client.Client.history_update" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_update</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">PerformUpdateType</span><span class="o">.</span><span class="n">Insert</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">history_update</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">PerformUpdateType</span><span class="o">.</span><span class="n">INSERT</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5552,7 +5612,7 @@ node targets.</p>
 
 
 <a href="#o6.client.Client.add_reference" class="headerlink" title="Permanent link">&para;</a></h6>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_reference</span><span class="p">(</span><span class="n">source_nodeid</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="p">,</span> <span class="n">target_nodeid</span><span class="p">,</span> <span class="n">is_forward</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">target_node_class</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">NodeClass</span><span class="o">.</span><span class="n">Unspecified</span><span class="p">,</span> <span class="n">target_server_uri</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_reference</span><span class="p">(</span><span class="n">source_nodeid</span><span class="p">,</span> <span class="n">reference_type_id</span><span class="p">,</span> <span class="n">target_nodeid</span><span class="p">,</span> <span class="n">is_forward</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">target_node_class</span><span class="o">=</span><span class="n">o6</span><span class="o">.</span><span class="n">NodeClass</span><span class="o">.</span><span class="n">UNSPECIFIED</span><span class="p">,</span> <span class="n">target_server_uri</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
