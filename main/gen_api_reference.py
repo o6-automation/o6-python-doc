@@ -6,6 +6,7 @@ import argparse
 import importlib
 import inspect
 import pkgutil
+import shutil
 from pathlib import Path
 
 try:
@@ -13,6 +14,7 @@ try:
 except ImportError:
     mkdocs_gen_files = None
 
+BASE_DIR = Path(__file__).resolve().parent
 
 ROOT_PACKAGES = ["o6"]
 
@@ -210,19 +212,9 @@ def ensure_md(path: str) -> str:
 def write_file(output_dir: str, path: str, content: str) -> None:
     path = ensure_md(path)
     full_path = Path(output_dir) / path if output_dir else Path(path)
-
-    if mkdocs_gen_files:
-        with mkdocs_gen_files.open(str(full_path), "w") as f:
-            f.write(content)
-
-        mkdocs_gen_files.set_edit_path(
-            str(full_path),
-            "docs/gen_api_reference.py",
-        )
-    else:
-        p = Path("docs") / full_path
-        p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(content, encoding="utf-8")
+    p = BASE_DIR / full_path
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(content, encoding="utf-8")
 
 
 # -------------------------------------------------
@@ -279,6 +271,10 @@ def build_index_md(pages: dict[str, str]) -> str:
 # GENERATOR
 # -------------------------------------------------
 def generate(output_dir: str = "api_reference") -> None:
+
+    output_path = BASE_DIR / output_dir
+    if output_path.exists():
+        shutil.rmtree(output_path)
 
     all_modules = set()
 

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -605,6 +605,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#easy-access-to-opc-ua-nodes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -620,17 +631,6 @@
     <span class="md-ellipsis">
       
         Data types through namespaces
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-this-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why this matters
       
     </span>
   </a>
@@ -1655,64 +1655,9 @@
 
 
 <h1 id="node-api">Node API<a class="headerlink" href="#node-api" title="Permanent link">&para;</a></h1>
-<p>o6 gives you direct, Pythonic access to OPC UA nodes and data types through the object model exposed by a connected client.</p>
+<p>o6 gives you direct, pythonic access to OPC UA nodes and data types through the object model exposed by a connected client.</p>
 <p>This is more than a service-based wrapper. Instead of only sending raw OPC UA requests, you can navigate the server's address space like a normal Python object, including both nodes and type definitions.</p>
-<h2 id="easy-access-to-opc-ua-nodes">Easy access to OPC UA nodes<a class="headerlink" href="#easy-access-to-opc-ua-nodes" title="Permanent link">&para;</a></h2>
-<p>When a client connects, it exposes the server entry points as Python objects:</p>
-<ul>
-<li><code>client.root</code></li>
-<li><code>client.objects</code></li>
-<li><code>client.types</code></li>
-<li><code>client.views</code></li>
-</ul>
-<p>These objects are live views into the server, not static snapshots. That means the dotted attribute syntax is not just convenience string parsing: it represents the actual OPC UA nodes in the server address space, wrapped in Python node objects.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">o6</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;opc.tcp://localhost:4840&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">node</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">MyVariable</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># The node object supports call-style to access attributes</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="p">())</span>                     <span class="c1"># read the node value</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="n">attr</span><span class="o">=</span><span class="s2">&quot;BrowseName&quot;</span><span class="p">))</span>    <span class="c1"># read a specific attribute by name</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># or use the OPC UA AttributeId enum</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># print(node(attr=o6.AttributeId.BROWSE_NAME))</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">node</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>                         <span class="c1"># write a new value to the node</span>
-</code></pre></div>
-<p>Expected output:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>np.int32(42)
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>o6.QualifiedName(&#39;1:MyVariable&#39;)
-</code></pre></div>
-<p>In the example above, <code>client.root.objects.MyVariable</code> is a direct path into the server's object hierarchy. The node returned behaves like a Python object, while still representing the underlying UA node.</p>
-<blockquote>
-<p>Important: a node object can be safely cached for later use, only when we are sure the server model remains unchanged and the node is not being removed or renamed on the server side.</p>
-</blockquote>
-<h2 id="data-types-through-namespaces">Data types through namespaces<a class="headerlink" href="#data-types-through-namespaces" title="Permanent link">&para;</a></h2>
-<p>Node API also makes data type access intuitive. Namespaces are exposed as Python packages under <code>o6.ns</code>.</p>
-<p>Because <code>o6.ns.di</code> is a prebuilt namespace object, you can use it even before a client connects.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">o6</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">ns</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">client</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ns</span><span class="o">.</span><span class="n">di</span><span class="p">)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">client</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;custom_nodeset2.xml&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;opc.tcp://localhost:4840&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">transfer_result_dt</span> <span class="o">=</span> <span class="n">ns</span><span class="o">.</span><span class="n">di</span><span class="o">.</span><span class="n">TransferResultDataDataType</span><span class="p">()</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">transfer_result_dt_client</span> <span class="o">=</span> <span class="n">ns</span><span class="o">.</span><span class="n">di</span><span class="o">.</span><span class="n">TransferResultDataDataType</span><span class="p">()</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">custom_type</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">Custom</span><span class="o">.</span><span class="n">CustomDataType</span><span class="p">()</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">transfer_result_dt</span><span class="p">)</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">transfer_result_dt_client</span><span class="p">)</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">custom_type</span><span class="p">)</span>
-</code></pre></div>
-<p>Expected output:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;TransferResultDataDataType NodeId=ns=2;i=12345&gt;
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&lt;TransferResultDataDataType NodeId=ns=2;i=12345&gt;
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>&lt;CustomDataType NodeId=ns=3;i=1001&gt;
-</code></pre></div>
-<p><code>o6.ns.di.TransferResultDataDataType()</code> constructs a Python representation of the OPC UA data type from the <code>di</code> namespace, and the same pattern works for your own custom NodeSet definitions. Your code stays idiomatic while still using UA schema-derived types.</p>
-<p>Types from the OPC UA schemas like <code>o6.ns.di</code> may be shared between clients, a type object created once can be reused by multiple clients no need for explicit namespace index conversions. Each client maintains its own namespace mapping, so the shared DI definitions are translated to the local client namespace index automatically when you append <code>ns.di</code> to that client. </p>
-<h2 id="why-this-matters">Why this matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h2>
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
 <p>A service-based API is centered around OPC UA requests and response objects, buliding <code>ReadRequest</code>s, sending them, and parsing the result. That is powerful and explicit, but it is also low-level.</p>
 <p>The Node API is a higher-level, object-oriented layer on top of the OPC UA services.</p>
 <table>
@@ -1745,6 +1690,78 @@
 <li>It gives a smoother onboarding path for application developers who want the flexibility of OPC UA without leaving Python's object model.</li>
 </ul>
 <p>The Node API is the bridge between OPC UA's object-oriented server model and Python's own object orientation.</p>
+<h2 id="easy-access-to-opc-ua-nodes">Easy access to OPC UA nodes<a class="headerlink" href="#easy-access-to-opc-ua-nodes" title="Permanent link">&para;</a></h2>
+<p>When a client connects, it exposes the server entry points as Python objects:</p>
+<ul>
+<li><code>client.root</code></li>
+<li><code>client.objects</code></li>
+<li><code>client.types</code></li>
+<li><code>client.views</code></li>
+</ul>
+<p>These objects are live views into the server. That means the dotted attribute syntax represents the actual OPC UA nodes in the server address space, wrapped in Python node objects.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">o6</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;opc.tcp://localhost:4840&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">node</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">MyVariable</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># The node object supports call-style to access attributes</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="p">())</span>                     <span class="c1"># read the node value</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="n">attr</span><span class="o">=</span><span class="s2">&quot;BrowseName&quot;</span><span class="p">))</span>    <span class="c1"># read a specific attribute by name</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># or use the OPC UA AttributeId enum</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># print(node(attr=o6.AttributeId.BROWSE_NAME))</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">node</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>                         <span class="c1"># write a new value to the node</span>
+</code></pre></div>
+<p>Expected output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>np.int32(42)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>o6.QualifiedName(&#39;1:MyVariable&#39;)
+</code></pre></div>
+<p>In the example above, <code>client.root.objects.MyVariable</code> is a direct path into the server's object hierarchy. The node returned behaves like a Python object, while still representing the underlying UA node.</p>
+<blockquote>
+<p>Important: a node object can be safely cached for later use, only when we are sure the server model remains unchanged and the node is not being removed or renamed on the server side.</p>
+</blockquote>
+<h2 id="data-types-through-namespaces">Data types through namespaces<a class="headerlink" href="#data-types-through-namespaces" title="Permanent link">&para;</a></h2>
+<p>Node API also makes data type access intuitive. Namespaces are exposed as Python packages under <code>o6.ns</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">o6</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># get the nodeid for the datatype</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">info</span> <span class="o">=</span> <span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">di</span><span class="o">.</span><span class="n">datatypes</span><span class="o">.</span><span class="n">FetchResultDataType</span><span class="o">.</span><span class="n">TransferResultDataDataType</span><span class="p">()</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># structs and enums can be directly instantiated </span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">pyclass</span> <span class="o">=</span> <span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">di</span><span class="o">.</span><span class="n">FetchResultDataType</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">instance</span> <span class="o">=</span> <span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">di</span><span class="o">.</span><span class="n">FetchResultDataType</span><span class="p">()</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">pyclass</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+</code></pre></div>
+<p>Expected output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>o6.NodeId(&#39;ns=1;i=15889&#39;)
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&lt;class &#39;o6.di.TransferResultDataDataType&#39;&gt;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>{sequence_number=0, end_of_results=False, parameter_defs=[]}
+</code></pre></div>
+<p>Because <code>o6.ns.di</code> is a prebuilt namespace object, you can use it even before a client connects. 
+We make use of these prebuilt namespace objects or custom xml defined nodesets in a client in a single line, before connecting the client:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">o6</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">o6</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;opc.tcp://localhost:4840&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">client</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">di</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">client</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;custom.nodeset2.xml&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">custom</span><span class="o">.</span><span class="n">datatypes</span><span class="o">.</span><span class="n">CustomDataType</span><span class="p">()</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">pyclass</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">custom</span><span class="o">.</span><span class="n">CustomDataType</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">instance</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">costom</span><span class="o">.</span><span class="n">CustomDataType</span><span class="p">()</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">pyclass</span><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+</code></pre></div>
+<p>Expected output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>o6.NodeId(&#39;ns=2;i=12345&#39;)
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&lt;class &#39;o6.custom.MyCustomType&#39;&gt;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>{member_a=0, member_b=0.0, member_c=False}
+</code></pre></div>
+<p><code>o6.ns.di.TransferResultDataDataType()</code> constructs a Python representation of the OPC UA data type from the <code>di</code> namespace. The same pattern works for your own custom NodeSet definitions. Your code stays idiomatic while still using UA schema-derived types.</p>
+<p>Types from the OPC UA schemas like <code>o6.ns.di</code> may be shared between clients, a type object created once can be reused by multiple clients no need for explicit namespace index conversions. Each client maintains its own namespace mapping, so the shared DI definitions are translated to the local client namespace index automatically when you append <code>ns.di</code> to that client. </p>
 
 
 
