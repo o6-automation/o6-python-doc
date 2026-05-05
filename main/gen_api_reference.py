@@ -9,11 +9,6 @@ import pkgutil
 import shutil
 from pathlib import Path
 
-try:
-    mkdocs_gen_files = importlib.import_module("mkdocs_gen_files")
-except ImportError:
-    mkdocs_gen_files = None
-
 BASE_DIR = Path(__file__).resolve().parent
 
 ROOT_PACKAGES = ["o6"]
@@ -353,9 +348,6 @@ def main():
 
     generate(args.output_dir)
 
-
-if mkdocs_gen_files is not None:
-    generate()
 
 if __name__ == "__main__":
     main()
