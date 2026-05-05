@@ -12,29 +12,31 @@
         <meta name="author" content="o6-automation">
       
       
+        <link rel="canonical" href="https://o6-automation.github.io/o6-python-doc/main/examples/server-objects.html">
       
-        <link rel="prev" href="../opcua-browser/">
+      
+        <link rel="prev" href="server-variables.html">
       
       
-        <link rel="next" href="../server-basic/">
+        <link rel="next" href="server-methods.html">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Minimal Server Example - pyo6 Documentation</title>
+        <title>Server Objects and Types Example - pyo6 Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#minimal-server-example" class="md-skip">
+        <a href="#server-objects-and-types-example" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +98,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="pyo6 Documentation" class="md-header__button md-logo" aria-label="pyo6 Documentation" data-md-component="logo">
+    <a href=".." title="pyo6 Documentation" class="md-header__button md-logo" aria-label="pyo6 Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Minimal Server Example
+              Server Objects and Types Example
             
           </span>
         </div>
@@ -225,7 +227,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../index.html" class="md-tabs__link">
           
   
   
@@ -243,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../node-api/" class="md-tabs__link">
+      <a href="../node-api.html" class="md-tabs__link">
         
   
   
@@ -264,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../client/" class="md-tabs__link">
+        <a href="../client.html" class="md-tabs__link">
           
   
   
@@ -282,7 +284,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../server/" class="md-tabs__link">
+      <a href="../server.html" class="md-tabs__link">
         
   
   
@@ -301,7 +303,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../api_reference/index.md" class="md-tabs__link">
+      <a href="../api_reference/index.md" class="md-tabs__link">
         
   
   
@@ -322,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../core-concepts/" class="md-tabs__link">
+        <a href="../core-concepts.html" class="md-tabs__link">
           
   
   
@@ -353,7 +355,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../client-basic/" class="md-tabs__link">
+        <a href="client-basic.html" class="md-tabs__link">
           
   
   
@@ -398,7 +400,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="pyo6 Documentation" class="md-nav__button md-logo" aria-label="pyo6 Documentation" data-md-component="logo">
+    <a href=".." title="pyo6 Documentation" class="md-nav__button md-logo" aria-label="pyo6 Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -482,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -510,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick_start/" class="md-nav__link">
+      <a href="../quick_start.html" class="md-nav__link">
         
   
   
@@ -545,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../node-api/" class="md-nav__link">
+      <a href="../node-api.html" class="md-nav__link">
         
   
   
@@ -626,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/" class="md-nav__link">
+      <a href="../client.html" class="md-nav__link">
         
   
   
@@ -661,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../server/" class="md-nav__link">
+      <a href="../server.html" class="md-nav__link">
         
   
   
@@ -688,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_reference/index.md" class="md-nav__link">
+      <a href="../api_reference/index.md" class="md-nav__link">
         
   
   
@@ -769,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core-concepts/" class="md-nav__link">
+      <a href="../core-concepts.html" class="md-nav__link">
         
   
   
@@ -918,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-basic/" class="md-nav__link">
+      <a href="client-basic.html" class="md-nav__link">
         
   
   
@@ -946,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-browsing/" class="md-nav__link">
+      <a href="client-browsing.html" class="md-nav__link">
         
   
   
@@ -974,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-config-example/" class="md-nav__link">
+      <a href="client-config-example.html" class="md-nav__link">
         
   
   
@@ -1002,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-modes/" class="md-nav__link">
+      <a href="client-modes.html" class="md-nav__link">
         
   
   
@@ -1030,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-node-management/" class="md-nav__link">
+      <a href="client-node-management.html" class="md-nav__link">
         
   
   
@@ -1058,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-usernamepw/" class="md-nav__link">
+      <a href="client-usernamepw.html" class="md-nav__link">
         
   
   
@@ -1086,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../opcua-browser/" class="md-nav__link">
+      <a href="opcua-browser.html" class="md-nav__link">
         
   
   
@@ -1176,6 +1178,118 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="server-minimal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Minimal Server Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="server-basic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Server Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="server-async.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Async Server Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="server-variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server Variables Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1195,7 +1309,7 @@
   <span class="md-ellipsis">
     
   
-    Minimal Server Example
+    Server Objects and Types Example
   
 
     
@@ -1206,14 +1320,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="server-objects.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Minimal Server Example
+    Server Objects and Types Example
   
 
     
@@ -1278,119 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../server-basic/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Basic Server Example
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../server-async/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Async Server Example
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../server-variables/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Server Variables Example
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../server-objects/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Server Objects and Types Example
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../server-methods/" class="md-nav__link">
+      <a href="server-methods.html" class="md-nav__link">
         
   
   
@@ -1418,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/" class="md-nav__link">
+      <a href="simulation.html" class="md-nav__link">
         
   
   
@@ -1511,7 +1513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../types-example/" class="md-nav__link">
+      <a href="types-example.html" class="md-nav__link">
         
   
   
@@ -1604,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jupyter-notebook/" class="md-nav__link">
+      <a href="jupyter-notebook.html" class="md-nav__link">
         
   
   
@@ -1660,33 +1662,110 @@
   
 
 
-<h1 id="minimal-server-example">Minimal Server Example<a class="headerlink" href="#minimal-server-example" title="Permanent link">&para;</a></h1>
-<p>Source example: <code>examples/highlevel/server_minimal.py</code></p>
-<p>This is the smallest server example in the repository.</p>
+<h1 id="server-objects-and-types-example">Server Objects and Types Example<a class="headerlink" href="#server-objects-and-types-example" title="Permanent link">&para;</a></h1>
+<p>Source example: <code>examples/highlevel/server_objects.py</code></p>
+<p>This example focuses on server object structure.</p>
 <h2 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">&para;</a></h2>
-<h3 id="starting-the-server">Starting the server<a class="headerlink" href="#starting-the-server" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">4840</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">server</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<h3 id="nested-object-hierarchy">Nested object hierarchy<a class="headerlink" href="#nested-object-hierarchy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">plant</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="s2">&quot;Plant&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">objects_node</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=100&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">oven</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="s2">&quot;Oven&quot;</span><span class="p">,</span> <span class="n">plant</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=110&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">conveyor</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="s2">&quot;Conveyor&quot;</span><span class="p">,</span> <span class="n">plant</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=120&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="creating-object-types">Creating object types<a class="headerlink" href="#creating-object-types" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">sensor_type</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object_type</span><span class="p">(</span><span class="s2">&quot;SensorType&quot;</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=200&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span> <span class="n">sensor_type</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=201&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span><span class="s2">&quot;Unit&quot;</span><span class="p">,</span> <span class="n">sensor_type</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=202&quot;</span><span class="p">,</span> <span class="n">writable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="instantiating-from-a-type-definition">Instantiating from a type definition<a class="headerlink" href="#instantiating-from-a-type-definition" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">humidity_sensor</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="s2">&quot;HumiditySensor&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">oven</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=130&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">type_definition</span><span class="o">=</span><span class="n">sensor_type</span><span class="o">.</span><span class="n">nodeid</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">)</span>
 </code></pre></div>
 <h2 id="full-source">Full source<a class="headerlink" href="#full-source" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/usr/bin/env python3</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">o6</span><span class="w"> </span><span class="kn">import</span> <span class="n">Server</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">4840</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">server</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Server running – press Ctrl+C to stop&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="k">pass</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">server</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/usr/bin/env python3</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">o6</span><span class="w"> </span><span class="kn">import</span> <span class="n">Server</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">4840</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">plant</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="s2">&quot;Plant&quot;</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">objects_node</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=100&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">oven</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="s2">&quot;Oven&quot;</span><span class="p">,</span> <span class="n">plant</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=110&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">oven_temp</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span><span class="s2">&quot;Temperature&quot;</span><span class="p">,</span> <span class="n">oven</span><span class="p">,</span> <span class="mf">180.0</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=111&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="n">oven_heater</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span><span class="s2">&quot;HeaterOn&quot;</span><span class="p">,</span> <span class="n">oven</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=112&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">conveyor</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="s2">&quot;Conveyor&quot;</span><span class="p">,</span> <span class="n">plant</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=120&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="n">conveyor_speed</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span><span class="s2">&quot;Speed&quot;</span><span class="p">,</span> <span class="n">conveyor</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=121&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="n">conveyor_running</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        <span class="s2">&quot;IsRunning&quot;</span><span class="p">,</span> <span class="n">conveyor</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=122&quot;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="p">)</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="n">sensor_type</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object_type</span><span class="p">(</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>        <span class="s2">&quot;SensorType&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=200&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    <span class="p">)</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    <span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span> <span class="n">sensor_type</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=201&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    <span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span><span class="s2">&quot;Unit&quot;</span><span class="p">,</span> <span class="n">sensor_type</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=202&quot;</span><span class="p">,</span> <span class="n">writable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    <span class="n">humidity_sensor</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>        <span class="s2">&quot;HumiditySensor&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        <span class="n">oven</span><span class="p">,</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>        <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=130&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>        <span class="n">type_definition</span><span class="o">=</span><span class="n">sensor_type</span><span class="o">.</span><span class="n">nodeid</span><span class="p">,</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    <span class="p">)</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>    <span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span> <span class="n">humidity_sensor</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=131&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>    <span class="n">server</span><span class="o">.</span><span class="n">add_variable</span><span class="p">(</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>        <span class="s2">&quot;Unit&quot;</span><span class="p">,</span> <span class="n">humidity_sensor</span><span class="p">,</span> <span class="s2">&quot;%RH&quot;</span><span class="p">,</span> <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=132&quot;</span><span class="p">,</span> <span class="n">writable</span><span class="o">=</span><span class="kc">False</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    <span class="p">)</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>    <span class="n">temperature_type</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">add_variable_type</span><span class="p">(</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>        <span class="s2">&quot;TemperatureType&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>        <span class="n">data_type</span><span class="o">=</span><span class="s2">&quot;i=11&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>        <span class="n">nodeid</span><span class="o">=</span><span class="s2">&quot;ns=1;i=300&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>    <span class="p">)</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>    <span class="n">server</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Server running at opc.tcp://localhost:4840&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Press Ctrl+C to stop.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Address space outline:&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Objects/&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    └─ Plant/&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;         ├─ Oven/  (Temperature, HeaterOn, HumiditySensor)&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;         └─ Conveyor/  (Speed, IsRunning)&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>    <span class="nb">print</span><span class="p">()</span>
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>        <span class="n">cycle</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>            <span class="n">cycle</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>            <span class="n">oven_temp</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">180.0</span> <span class="o">+</span> <span class="p">(</span><span class="n">cycle</span> <span class="o">%</span> <span class="mi">20</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span>
+<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>            <span class="n">conveyor_speed</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">+</span> <span class="p">(</span><span class="n">cycle</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.1</span>
+<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>            <span class="n">conveyor_running</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">cycle</span> <span class="o">%</span> <span class="mi">15</span> <span class="o">!=</span> <span class="mi">0</span>
+<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>
+<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>            <span class="k">if</span> <span class="n">cycle</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>                <span class="nb">print</span><span class="p">(</span>
+<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>                    <span class="sa">f</span><span class="s2">&quot;  Cycle </span><span class="si">{</span><span class="n">cycle</span><span class="si">}</span><span class="s2">: &quot;</span>
+<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>                    <span class="sa">f</span><span class="s2">&quot;OvenTemp=</span><span class="si">{</span><span class="n">oven_temp</span><span class="o">.</span><span class="n">value</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">°C, &quot;</span>
+<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>                    <span class="sa">f</span><span class="s2">&quot;ConvSpeed=</span><span class="si">{</span><span class="n">conveyor_speed</span><span class="o">.</span><span class="n">value</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">m/s&quot;</span>
+<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>                <span class="p">)</span>
+<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>
+<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>
+<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Shutting down…&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>    <span class="k">finally</span><span class="p">:</span>
+<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>        <span class="n">server</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Server stopped.&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>
+<a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>
+<a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>    <span class="n">main</span><span class="p">()</span>
 </code></pre></div>
 
 
@@ -1760,10 +1839,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.expand", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.expand", "navigation.sections"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
