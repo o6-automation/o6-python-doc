@@ -2307,6 +2307,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2600,6 +2604,60 @@
     
   
   Compiling Nodesets
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-nodesets-in-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Writing a Nodeset in Python
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementing-object-behavior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Implementing Object Behavior
 
     
   </span>
@@ -2966,6 +3024,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3207,7 +3269,7 @@ A Server that wants to use these loaded nodesets then appends them. Server <stro
 <div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">module</span> <span class="o">=</span> <span class="n">o6</span><span class="o">.</span><span class="n">ns</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;myns&quot;</span><span class="p">,</span> <span class="s2">&quot;http://o6.example.org/Myns/&quot;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span><span class="p">)</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">module</span><span class="o">.</span><span class="n">index</span>
 </span></code></pre></div>
-<p>See <a href="https://github.com/o6-automation/o6-python-agpl/blob/main/examples/nodeset/myns.py"><code>examples/nodeset/myns.py</code></a> for a complete hand-written nodeset module.</p>
+<p>See <a href="../writing-nodesets-in-python/">Writing a Nodeset in Python</a> for the full authoring guide, and <a href="https://github.com/o6-automation/o6-python-agpl/blob/main/examples/nodeset/myns.py"><code>examples/nodeset/myns.py</code></a> for a complete hand-written nodeset module.</p>
 <hr />
 <h2 id="practical-use-of-shortname">Practical use of shortname<a class="headerlink" href="#practical-use-of-shortname" title="Permanent link">&para;</a></h2>
 <p>Once a namespace is registered, its <code>shortname</code> becomes a stable handle you can carry around in code, copy-paste into config files, and reason about without thinking about server-assigned indices. The <code>shortname</code> is what <code>o6.ns.di</code>, <code>o6.ns.machinery</code>, <code>o6.ns.custom</code>, … resolve to — and the same string also goes into every <code>NodeId</code> string you write.</p>
@@ -3254,6 +3316,9 @@ application-local namespaces remain numeric indices:</p>
 <ul>
 <li>Compile a <code>*.NodeSet2.xml</code> into an importable namespace package:
   <a href="../compiling-nodesets/">Compiling Nodesets</a>.</li>
+<li>Declare a namespace and its types entirely in Python, with no XML involved:
+  <a href="../writing-nodesets-in-python/">Writing a Nodeset in Python</a>, and
+  <a href="../implementing-object-behavior/">Implementing Object Behavior</a> for the behavior behind them.</li>
 <li>The OPC UA spec's normative treatment of the nodeset format (<code>UANodeSet</code> schema, <code>RequiredModel</code>, <code>&lt;DataTypeDefinition&gt;</code> / <code>&lt;StructureDefinition&gt;</code> / <code>&lt;EnumDefinition&gt;</code> / <code>&lt;UnionDefinition&gt;</code>):
   <a href="https://reference.opcfoundation.org/Core/Part6/v105/docs/F">Part 6, Annex F — Information Model XML Schema</a>.</li>
 <li>The XML schemas themselves, versioned alongside the spec:
