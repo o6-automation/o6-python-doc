@@ -1,138 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/install/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/install/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/commercial-build/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/commercial-build/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/OPC-UA-basics/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/OPC-UA-basics/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/opcua-basics/protocol/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/opcua-basics/protocol/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/opcua-basics/services/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/opcua-basics/services/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/opcua-basics/information-modelling/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/opcua-basics/information-modelling/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/100_connect/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/100_connect/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/110_browse/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/110_browse/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/120_read-write-node/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/120_read-write-node/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/130_call-method/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/130_call-method/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/140_node-api-syntax/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/140_node-api-syntax/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/200_monitor-datachange/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/200_monitor-datachange/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/210_subscriptions/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/210_subscriptions/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/220_modify-subscription/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/220_modify-subscription/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/230_subscription-filter/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/230_subscription-filter/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/300_security/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/300_security/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/310_application-description/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/310_application-description/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/320_state-callbacks/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/320_state-callbacks/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/410_load-packaged-companion-specs/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/410_load-packaged-companion-specs/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/420_load-nodeset-files/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/420_load-nodeset-files/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/430_nodeids-and-namespace-info/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/430_nodeids-and-namespace-info/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/440_semantic-discovery/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/440_semantic-discovery/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/500_lowlevel-service-calls/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/500_lowlevel-service-calls/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/tutorials/client/510_async-client/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/tutorials/client/510_async-client/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/node-api/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/node-api/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/node-api/usage/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/node-api/usage/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/builtin/primitive-types/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/builtin/primitive-types/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/builtin/statuscode/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/builtin/statuscode/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/builtin/container-types/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/builtin/container-types/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/builtin/address-types/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/builtin/address-types/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/opcua-recap/datatype/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/opcua-recap/datatype/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/opcua-recap/namespace/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/opcua-recap/namespace/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/opcua-recap/nodesets-and-companion-specs/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/opcua-recap/nodesets-and-companion-specs/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/namespace/namespace-mapping-in-o6/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/namespace/namespace-mapping-in-o6/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/namespace/loading-and-using-nodesets/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/namespace/loading-and-using-nodesets/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/namespace/compiling-nodesets/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/namespace/compiling-nodesets/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/namespace/writing-nodesets-in-python/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/namespace/writing-nodesets-in-python/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/types-addrspace/namespace/implementing-object-behavior/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/types-addrspace/namespace/implementing-object-behavior/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/client/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/client/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/server/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/server/</loc>
       </url>
       <url>
-        <loc>https://o6-automation.github.io/o6-python-doc/main/performance/</loc>
+        <loc>https://o6-automation.github.io/o6-python/main/performance/</loc>
       </url>
 </urlset>
